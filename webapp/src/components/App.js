@@ -28,7 +28,7 @@ function App() {
             </Form>
           </Navbar.Collapse>
       </Navbar>
-      <Image src="assets/DSC_0450.jpg" fluid />
+      <Image src="assets/DSC_0450.jpg" thumbnail />
     </div>
   );
 }
