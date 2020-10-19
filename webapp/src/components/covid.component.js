@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import { Navbar, Nav, Button, FormControl, NavDropdown, Form } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel'
 import LinkContainer from 'react-router-bootstrap'
 import { Route, Router } from 'react-router-dom'
-import CovidComponent from './covid.component'
 import HomeComponent from './home.component'
 import InstalacionesComponent from './instalaciones.component'
 import SanseComponent from './sanse.component'
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">Universidad de Navarra</Navbar.Brand>
+
+
+export default class CovidComponent extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="/home">Universidad de Navarra</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -28,8 +30,11 @@ function App() {
             </Form>
           </Navbar.Collapse>
       </Navbar>
-    </div>
-  );
+      <h3>covid 19</h3>
+      
+
+      </div>
+    );
+  }
 }
 
-export default App;

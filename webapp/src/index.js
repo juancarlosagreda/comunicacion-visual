@@ -4,10 +4,21 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css"
+import { Route, BrowserRouter } from 'react-router-dom'
+import CovidComponent from './components/covid.component'
+import InstalacionesComponent from './components/instalaciones.component'
+import SanseComponent from './components/sanse.component'
+import HomeComponent from './components/home.component'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <Route path="/home" component={HomeComponent}/>
+        <Route path="/instalaciones" component={InstalacionesComponent}/>
+        <Route path="/sanse" component={SanseComponent}/>
+        <Route path="/covid" component={CovidComponent}/>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
