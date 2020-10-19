@@ -1,9 +1,9 @@
 import React from 'react';
 import '../App.css';
-import { Navbar, Nav, Button, FormControl, NavDropdown, Form } from "react-bootstrap"
+import { Navbar, Nav, Button, FormControl, NavDropdown, Form, Image } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel'
 import LinkContainer from 'react-router-bootstrap'
-import { Route, Router } from 'react-router-dom'
+import { Route, BrowserRouter } from 'react-router-dom'
 import CovidComponent from './covid.component'
 import HomeComponent from './home.component'
 import InstalacionesComponent from './instalaciones.component'
@@ -28,6 +28,7 @@ function App() {
             </Form>
           </Navbar.Collapse>
       </Navbar>
+      <Image src="assets/DSC_0450.jpg" fluid />
     </div>
   );
 }

@@ -14,10 +14,11 @@ import HomeComponent from './components/home.component'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-        <Route path="/home" component={HomeComponent}/>
-        <Route path="/instalaciones" component={InstalacionesComponent}/>
-        <Route path="/sanse" component={SanseComponent}/>
-        <Route path="/covid" component={CovidComponent}/>
+        <Route path="/" exact component={App}/>
+        <Route path="/home" exact component={HomeComponent}/>
+        <Route path="/instalaciones" exact component={InstalacionesComponent}/>
+        <Route path="/sanse" exact component={SanseComponent}/>
+        <Route path="/covid" exact component={CovidComponent}/>
       </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
