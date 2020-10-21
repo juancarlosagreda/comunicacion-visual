@@ -9,7 +9,7 @@ export default class HomeComponent extends Component {
     return (
       <div className="App">
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">Universidad de Navarra</Navbar.Brand>
+          <Navbar.Brand href="#">Universidad de Navarra</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -26,7 +26,7 @@ export default class HomeComponent extends Component {
       </Navbar>
       <Carousel>
           <Carousel.Item>
-            <img className="d-block w-100" src="assets/home0.jpg" alt="First slide" />
+            <img className="d-block w-100" src="assets/home1.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Universidad de Navarra - Campus San Sebastián</h3>
               <h6>El mejor lugar para completar tus estudios.</h6>
@@ -34,7 +34,7 @@ export default class HomeComponent extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="assets/home1.jpg" alt="First slide" />
+            <img className="d-block w-100" src="assets/home0.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Universidad de Navarra - Campus San Sebastián</h3>
               <h6>El mejor lugar para completar tus estudios.</h6>

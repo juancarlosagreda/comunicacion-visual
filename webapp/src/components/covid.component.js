@@ -10,7 +10,7 @@ export default class CovidComponent extends Component {
     return (
       <div className="App">
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/home">Universidad de Navarra</Navbar.Brand>
+          <Navbar.Brand href="#">Universidad de Navarra</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

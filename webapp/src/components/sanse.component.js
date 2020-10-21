@@ -8,7 +8,7 @@ export default class SanseComponent extends Component {
     return (
       <div className="App">
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/home">Universidad de Navarra</Navbar.Brand>
+          <Navbar.Brand href="#">Universidad de Navarra</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -36,7 +36,7 @@ export default class SanseComponent extends Component {
           a la altura de tal título.
         </p>
         <p>
-          <Button variant="primary">Learn more</Button>
+          <Button href="https://estudiantextranjero.com/top-10-atracciones-de-san-sebastian-donostia-en-2020/" variant="primary">Learn more</Button>
         </p>
       </Jumbotron>
       <Container fluid>

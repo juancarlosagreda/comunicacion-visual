@@ -24,7 +24,7 @@ function App() {
       </Navbar>
       <Carousel>
           <Carousel.Item>
-            <img className="d-block w-100" src="assets/home0.jpg" alt="First slide" />
+            <img className="d-block w-100" src="assets/home1.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Universidad de Navarra - Campus San Sebastián</h3>
               <h6>El mejor lugar para completar tus estudios.</h6>
@@ -32,7 +32,7 @@ function App() {
           </Carousel.Item>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="assets/home1.jpg" alt="First slide" />
+            <img className="d-block w-100" src="assets/home0.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Universidad de Navarra - Campus San Sebastián</h3>
               <h6>El mejor lugar para completar tus estudios.</h6>
