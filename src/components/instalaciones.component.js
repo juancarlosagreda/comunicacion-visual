@@ -91,7 +91,7 @@ export default class InstalacionesComponent extends Component {
             <img className="d-block w-100" src="assets/tecnun0.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Campus San Sebastián</h3>
-              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+              <h6>El mejor ambiente para el ingenero.</h6>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -99,7 +99,7 @@ export default class InstalacionesComponent extends Component {
             <img className="d-block w-100" src="assets/tecnun1.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Campus San Sebastián</h3>
-              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+              <h6>El mejor ambiente para el ingenero.</h6>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -107,7 +107,7 @@ export default class InstalacionesComponent extends Component {
             <img className="d-block w-100" src="assets/tecnun2.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Campus San Sebastián</h3>
-              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+              <h6>El mejor ambiente para el ingenero.</h6>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -115,7 +115,7 @@ export default class InstalacionesComponent extends Component {
             <img className="d-block w-100" src="assets/tecnun3.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Campus San Sebastián</h3>
-              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+              <h6>El mejor ambiente para el ingenero.</h6>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -123,7 +123,7 @@ export default class InstalacionesComponent extends Component {
             <img className="d-block w-100" src="assets/tecnun4.jpg" alt="First slide" />
             <Carousel.Caption>
               <h3>Campus San Sebastián</h3>
-              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+              <h6>El mejor ambiente para el ingenero.</h6>
             </Carousel.Caption>
           </Carousel.Item>
 
