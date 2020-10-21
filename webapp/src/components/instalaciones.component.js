@@ -33,7 +33,7 @@ export default class InstalacionesComponent extends Component {
             San Sebastián, o Madrid.
         </p>
         <p>
-          <Button href="https://www.unav.edu/en/web/conoce-la-universidad/campus" variant="primary">Learn more</Button>
+          <Button href="https://www.unav.edu/en/web/conoce-la-universidad/campus" variant="primary">Conoce más</Button>
         </p>
       </Jumbotron>
       

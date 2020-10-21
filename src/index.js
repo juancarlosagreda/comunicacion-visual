@@ -14,7 +14,7 @@ import HomeComponent from './components/home.component'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-        <Route path="/" exact component={App}/>
+        <Route path="/" exact component={HomeComponent}/>
         <Route path="/home" exact component={HomeComponent}/>
         <Route path="/instalaciones" exact component={InstalacionesComponent}/>
         <Route path="/sanse" exact component={SanseComponent}/>
