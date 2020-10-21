@@ -1,13 +1,7 @@
 import React from 'react';
 import '../App.css';
-import { Navbar, Nav, Button, FormControl, NavDropdown, Form, Image } from "react-bootstrap"
-import Carousel from 'react-bootstrap/Carousel'
-import LinkContainer from 'react-router-bootstrap'
-import { Route, BrowserRouter } from 'react-router-dom'
-import CovidComponent from './covid.component'
-import HomeComponent from './home.component'
-import InstalacionesComponent from './instalaciones.component'
-import SanseComponent from './sanse.component'
+import { Navbar, Nav, Button, FormControl, Container, Form, Image, Row, Col } from "react-bootstrap"
+var { SocialIcon } = require('react-social-icons');
 
 function App() {
   return (
@@ -17,7 +11,7 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="/home">Home</Nav.Link>
+                <Nav.Link href="/home">Inicio</Nav.Link>
                 <Nav.Link href="/instalaciones">Instalaciones</Nav.Link>
                 <Nav.Link href="/sanse">San Sebastián</Nav.Link>
                 <Nav.Link href="/covid">COVID-19</Nav.Link>
@@ -28,7 +22,50 @@ function App() {
             </Form>
           </Navbar.Collapse>
       </Navbar>
-      <Image src="assets/DSC_0450.jpg" thumbnail />
+      <Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/home0.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Universidad de Navarra - Campus San Sebastián</h3>
+              <h6>El mejor lugar para completar tus estudios.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/home1.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Universidad de Navarra - Campus San Sebastián</h3>
+              <h6>El mejor lugar para completar tus estudios.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/home2.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Universidad de Navarra - Campus San Sebastián</h3>
+              <h6>El mejor lugar para completar tus estudios.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+          
+        </Carousel>
+        <br />
+        <Container>
+          <Row>
+            <Col>
+              <SocialIcon url="https://www.facebook.com/unav/" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://twitter.com/unav" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.instagram.com/universidaddenavarra/?hl=es" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.linkedin.com/school/universidad-de-navarra-cp/" />
+            </Col>
+          </Row>
+      </Container>
+      <br />
     </div>
   );
 }

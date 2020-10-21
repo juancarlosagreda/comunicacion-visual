@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { Navbar, Nav, Button, FormControl, Media, Form, Container, Card, Jumbotron } from "react-bootstrap"
-import Carousel from 'react-bootstrap/Carousel'
-import LinkContainer from 'react-router-bootstrap'
-import { Route, Router } from 'react-router-dom'
-import CovidComponent from './covid.component'
-import HomeComponent from './home.component'
-import SanseComponent from './sanse.component'
+import { Navbar, Nav, Button, FormControl, Carousel, Form, Container, Card, Jumbotron, Row, Col, Figure } from "react-bootstrap"
+var { SocialIcon } = require('react-social-icons');
 
 export default class InstalacionesComponent extends Component {
   render() {
@@ -31,74 +26,128 @@ export default class InstalacionesComponent extends Component {
       <Jumbotron>
         <h1>Instalaciones</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
+            La Universidad de Navarra destaca por sus instalaciones, 
+            tanto en el ámbito académico como a la hora de facilitar a sus 
+            alumnos una vida universitaria completa, y enriquecer la vida de 
+            la ciudad en la que se encuentra el campus, ya sea Pamplona, 
+            San Sebastián, o Madrid.
         </p>
         <p>
-          <Button variant="primary">Learn more</Button>
+          <Button href="https://www.unav.edu/en/web/conoce-la-universidad/campus" variant="dark">Learn more</Button>
         </p>
       </Jumbotron>
-      <Container fluid>
-      <ul className="list-unstyled">
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <Card.Body>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </Card.Body>
-          </Media.Body>
-        </Media>
-
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-      </ul>
-      </Container>
       
+      <Container>
+        <Row>
+          <Col>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="assets/campus-pamp.jpg" />
+              <Card.Body>
+                <Card.Title>Campus Pamplona</Card.Title>
+                <Card.Text>
+                  En Pamplona es donde se encuentra el campus principal de la Universidad, 
+                  por lo que es donde se encuentran la mayoría de las instalaciones. 
+                </Card.Text>
+                <Button href="https://360.unav.edu/G1jGbc2JLN/9638884p,2830027m,145.12h,65.13t" variant="dark">Conocer más</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src="assets/campus-sanc.jpg" />
+                <Card.Body>
+                  <Card.Title>Campus San Sebastián</Card.Title>
+                  <Card.Text>
+                    San Sebastián se encuentra apenas a una hora en coche de Pamplona, 
+                    y es donde se halla la Escuela de Ingenieros de la Universidad, 
+                    TECNUN, foco de esta página web. 
+                  </Card.Text>
+                  <Button href="https://www.unav.edu/en/alumnos/campus-de-san-sebastian" variant="dark">Conocer más</Button>
+                </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src="assets/campus-madrid.jpeg" />
+                <Card.Body>
+                  <Card.Title>Campus Madrid</Card.Title>
+                  <Card.Text>
+                    El campus de Madrid ha recibido mucha potenciación por parte de la 
+                    Universidad en los últimos años, con el lanzamiento de nuevos másteres 
+                    y la apertura de una sede de la CUN con tecnología punta. 
+                  </Card.Text>
+                  <Button href="https://360.unav.edu/G1jGbc2JLN/11632822p,2830027m,399.99h,90.55t" variant="dark">Conocer más</Button>
+                </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+
+      <br />
+      
+      <Carousel>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/tecnun0.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Campus San Sebastián</h3>
+              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/tecnun1.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Campus San Sebastián</h3>
+              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/tecnun2.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Campus San Sebastián</h3>
+              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/tecnun3.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Campus San Sebastián</h3>
+              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/tecnun4.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Campus San Sebastián</h3>
+              <h6>Nulla vitae elit libero, a pharetra augue mollis interdum.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+        </Carousel>
+
+      <br />
+
+      <Container>
+        <Row>
+          <Col>
+            <SocialIcon url="https://www.facebook.com/unav/" />
+          </Col>
+          <Col>
+            <SocialIcon url="https://twitter.com/unav" />
+          </Col>
+          <Col>
+            <SocialIcon url="https://www.instagram.com/universidaddenavarra/?hl=es" />
+          </Col>
+          <Col>
+            <SocialIcon url="https://www.linkedin.com/school/universidad-de-navarra-cp/" />
+          </Col>
+        </Row>
+      </Container>
+      <br />
       </div>
     );
   }

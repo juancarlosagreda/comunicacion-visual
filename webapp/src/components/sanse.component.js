@@ -1,12 +1,7 @@
 import React, { Component} from 'react';
 import '../App.css';
-import { Navbar, Nav, Button, FormControl, Media, Jumbotron, Container, Card, Form } from "react-bootstrap"
-import Carousel from 'react-bootstrap/Carousel'
-import LinkContainer from 'react-router-bootstrap'
-import { Route, Router } from 'react-router-dom'
-import CovidComponent from './covid.component'
-import HomeComponent from './home.component'
-import InstalacionesComponent from './instalaciones.component'
+import { Navbar, Nav, Button, Figure, FormControl, Carousel, Jumbotron, Container, Tabs, Tab, Form, Row, Col } from "react-bootstrap"
+var { SocialIcon } = require('react-social-icons');
 
 export default class SanseComponent extends Component {
   render() {
@@ -32,73 +27,127 @@ export default class SanseComponent extends Component {
       <Jumbotron>
         <h1>Donostia-San Sebastián</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
+          San Sebastián destaca como una de las ciudades más turísticas de la costa cantábrica. 
+          Cuenta con 3 playas destacables, entre las que se encuentra la playa de la Concha, 
+          considerada entre las mejores del mundo. Cuenta con gran variedad de parques y zonas de paseo, 
+          en las que poder relajarse o hacer deporte sin el ajetreo de la calle. También cuenta 
+          con diversos monumentos históricos, así como varios museos, y diferentes centros de cultura 
+          como el Kursaal y el teatro Victoria Eugenia. Capital Europea de la Cultura en 2016, vive 
+          a la altura de tal título.
         </p>
         <p>
-          <Button variant="dark">Learn more</Button>
+          <Button variant="primary">Learn more</Button>
         </p>
       </Jumbotron>
       <Container fluid>
-      <ul className="list-unstyled">
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <Card.Body>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </Card.Body>
-          </Media.Body>
-        </Media>
-
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-      </ul>
+        <Row>
+          <Col>
+            <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example" fluid>
+              <Tab eventKey="home" title="Turismo">
+                San Sebastián cuenta con una gran riqueza a la hora del turismo. 
+                Sus playas, sus paseos, y su gran variedad de actividades permiten una 
+                experiencia inolvidable para quien venga de visita. Cuenta con 3 playas 
+                destacables, entre las que se encuentra la playa de la Concha, considerada 
+                entre las mejores del mundo. Cuenta con gran variedad de parques y zonas de 
+                paseo, en las que poder relajarse o hacer deporte sin el ajetreo de la calle. 
+                Caben destacar también las zonas de los alrededores, accesibles tanto en coche como en 
+                diferentes autobuses de cercanías, que también cuentan con su propia 
+                belleza. 
+              </Tab>
+              <Tab eventKey="profile" title="Gastronomía">
+                La diversidad de la cocina donostiarra es famosa en el mundo entero. 
+                La gastronomía del pintxo es variada y rica en sabores. Basta con 
+                acercarse a cualquier bar del centro para descubrir gran variedad de 
+                estas tapas de picoteo. Experiencia obligada a quien venga de visita, 
+                o a nuevos residentes.
+              </Tab>
+              <Tab eventKey="contact" title="Cultura">
+                San Sebastián cuenta con una gran riqueza cultural. Una diversidad 
+                nada desdeñable de museos tanto técnicos como artísticos, un acuario, 
+                varios teatros y centros de actuaciones, además de centros de barrio que 
+                man la vida de la zona. Caben destacar además el Festival Internacional 
+                de Cine, celebrado en la ciudad la penúltima semana de septiembre, y la 
+                festividad de San Sebastián con su tamborrada, celebrada el 20 de enero.
+              </Tab>
+            </Tabs>
+            </Col>
+            <Col>
+              <Figure>
+                <Figure.Image
+                  width={250}
+                  height={200}
+                  alt="171x180"
+                  src="assets/sanse2.jpg"
+                />
+                <Figure.Caption>
+                    Playa de la Concha
+                </Figure.Caption>
+              </Figure>
+            </Col>
+        </Row>
       </Container>
+      <br />
+
+      <Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/sanse0.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Turismo</h3>
+              <h6>San Sebastián destaca como una de las ciudades más turísticas de la costa cantábrica</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/sanse1.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Gastronomía</h3>
+              <h6>La diversidad de la cocina donostiarra es famosa en el mundo entero. </h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/sanse3.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Cultura</h3>
+              <h6>Capital Europea de la Cultura en 2016, vive a la altura de tal título.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+          
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/sanse4.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Cultura</h3>
+              <h6>Capital Europea de la Cultura en 2016, vive a la altura de tal título.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="assets/sanse5.jpg" alt="First slide" />
+            <Carousel.Caption>
+              <h3>Cultura</h3>
+              <h6>Capital Europea de la Cultura en 2016, vive a la altura de tal título.</h6>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+
+      <br />
+        <Container>
+          <Row>
+            <Col>
+              <SocialIcon url="https://www.facebook.com/unav/" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://twitter.com/unav" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.instagram.com/universidaddenavarra/?hl=es" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.linkedin.com/school/universidad-de-navarra-cp/" />
+            </Col>
+          </Row>
+      </Container>
+      <br />
       
       </div>
     );

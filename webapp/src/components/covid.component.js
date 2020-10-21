@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { Navbar, Nav, Button, FormControl, Jumbotron, Container, Media, Card, Form } from "react-bootstrap"
-import Carousel from 'react-bootstrap/Carousel'
-import LinkContainer from 'react-router-bootstrap'
-import { Route, Router } from 'react-router-dom'
-import HomeComponent from './home.component'
-import InstalacionesComponent from './instalaciones.component'
-import SanseComponent from './sanse.component'
+import { Navbar, Nav, Button, FormControl, Jumbotron, Container, Accordion, Card, Row, Form, Col, Carousel } from "react-bootstrap"
+var { SocialIcon } = require('react-social-icons');
 
 
 
@@ -33,74 +28,123 @@ export default class CovidComponent extends Component {
       <Jumbotron>
         <h1>COVID-19</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
+          La Universidad de Navarra no solo destaca como pioneros en campos 
+          como la docencia o investigación, si no también por una gran cercanía
+          con los nuestros: empleados, profesores y alumnos; haciendo que su 
+          experiencia en la universidad sea lo más agradable posible.  
+          Desgraciadamente durante este año 2020 el mundo ha dado un vuelco debido a 
+          la devastadora situación generada por la pandemia de la COVID-19. Ante tal 
+          situación la Universidad de Navarra, como muchas otras instituciones, han 
+          propuesto un riguroso número de normas para frenar la propagación del virus. 
         </p>
         <p>
-          <Button variant="dark">Learn more</Button>
+          <Button href="https://www.unav.edu/en/web/prepara2/inicio" variant="primary">Learn more</Button>
         </p>
       </Jumbotron>
       <Container fluid>
-      <ul className="list-unstyled">
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <Card.Body>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </Card.Body>
-          </Media.Body>
-        </Media>
+        <h3>¿Cuales son los motivos para tales medidas?</h3>
+        <Row>
+          <Col>
+            <Accordion defaultActiveKey="">
+              <Card>
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    La gran cercanía en la Universidad de Navarra 
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    La gran cercanía en la Universidad de Navarra es posible gracias al gran 
+                    ambiente de familia que se respira en él. Desde la docencia, la relación 
+                    profesor-alumno, relación con los empleados… es palpable el objetivo de 
+                    formar a los mejores profesionales del presente y del futuro poyándose los 
+                    unos en los otros.
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card> 
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                    Empatia, amistad y espiritu
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="1">
+                  <Card.Body>
+                    Empatía y amistad hacia las personas que forman parte de la universidad. 
+                    Cuidar a los nuestros. <br />
+                    Empatía y espíritu de responsabilidad con la sociedad en la que vivimos 
+                    ¿Que pensamos que hay que hacer?
 
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-
-        <Media as="li">
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src="assets/DSC_0450.jpg"
-            alt="Generic placeholder"
-          />
-          <Media.Body>
-            <h5>List-based media object</h5>
-            <p>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-              ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-              tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-              fringilla. Donec lacinia congue felis in faucibus.
-            </p>
-          </Media.Body>
-        </Media>
-      </ul>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card> 
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                    Presencia social
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="2">
+                  <Card.Body>
+                    La Universidad de Navarra es una universidad muy presente en la sociedad 
+                    de hoy en día. Ya sea mediante actividades solidarias como acompañamiento, 
+                    teatros, conciertos de música… o mediante instituciones como la CUN o el CIMA, 
+                    todas en vistas a ayudar al sector de la sociedad más necesitado. Por eso la 
+                    Universidad de Navarra es un referente para mucha gente, y por tanto debe dar ejemplo 
+                    y lanzar un mensaje de responsabilidad y unidad. La universidad es un activo para la 
+                    sociedad muy importante, y debe actuar como tal.
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card> 
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                    ¿Que medidas hemos tomado?
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="3">
+                  <Card.Body>
+                    <Carousel>
+                      <Carousel.Item>
+                        <img className="d-block w-100" src="assets/covid-cartel.jpg" alt="First slide" />
+                        <Carousel.Caption>
+                          <h3>Medidas básicas</h3>
+                          <h6>Alcohol gel, mascarillas obligatorias, y pantallas protectoras</h6>
+                        </Carousel.Caption>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <img className="d-block w-100" src="assets/covid-mesas.jpg" alt="First slide" />
+                        <Carousel.Caption>
+                          <h3>Reducción del aforo por las aulas</h3>
+                          <h6>Según el espacio en el aula y las distancias de seguridad</h6>
+                        </Carousel.Caption>
+                      </Carousel.Item>
+                    </Carousel>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+            </Accordion>
+          </Col>
+        </Row>
       </Container>
-      
+      <br />
+        <Container>
+          <Row>
+            <Col>
+              <SocialIcon url="https://www.facebook.com/unav/" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://twitter.com/unav" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.instagram.com/universidaddenavarra/?hl=es" />
+            </Col>
+            <Col>
+              <SocialIcon url="https://www.linkedin.com/school/universidad-de-navarra-cp/" />
+            </Col>
+          </Row>
+      </Container>
+      <br />
       
 
       </div>
