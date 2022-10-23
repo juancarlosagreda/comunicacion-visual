@@ -4,7 +4,7 @@ Una página web dedicada a explicar porqué el campus de San Sebastian de la Uni
 
 ## Contributors
 
-- Juan Carlos Agreda Pacas
+- Juan Carlos Agreda 
 - Javier Arellano
 - Miguel Burguete
 - Erika Sáenz de Santa María
